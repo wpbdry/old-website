@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!------------------------------------------------------------------------
+_/                _/  _/_/_/    _/_/_/    _/_/_/    _/_/_/    _/      _/  
+_/              _/   _/    _/  _/    _/  _/    _/  _/    _/    _/  _/     
+_/    _/_/    _/    _/_/_/    _/_/_/    _/    _/  _/_/_/        _/      
+_/  _/  _/  _/     _/        _/    _/  _/    _/  _/  _/        _/       
+_/_/    _/_/      _/        _/_/_/    _/_/_/    _/    _/      _/  made it!
+------------------------------------------------------------------------->
+
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>William Dry</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500|Sunflower:300" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <img src="img/background.jpg" id="background-img">
+    <div id="div-header">
+        <img id="img-logo" src="img/logo.png" alt="<w/>">
+        <div id="div-text-name">
+            William Dry
+        </div>
+        <div id="div-text-subheading">
+            Software Engineer.
+        </div>
+        <div id="div-header-links">
+            <a href="#scroll-my-apps">my apps</a>
+            <a href="#scroll-about-me">about me</a>
+            <a href="#scroll-get-in-touch">get in touch</a>
+        </div>
+        
+        <!--This works but it's not important right now
+        <div id="div-lang">
+            <img id="img-lang-arrow" src="img/expand.png">
+            <img id="img-lang-1" src="img/us_uk.png" title="English">
+            <a href="de.html">
+                <img id="img-lang-2" src="img/de.png" title="Deutsch">
+            </a>
+        </div>
+        -->
+        
+    </div>
+    
+    <div id="div-content">
+        
+        <!--my apps-->
+        
+        <div class="div-scrollto-padding" id="scroll-my-apps"></div>
+        <h1 id="heading-my-apps">
+            My apps
+        </h1>
+        
+        <div class="div-app">
+            <a href="wordgame/" target="_blank">
+                <img src="img/screenshot-wordgame.png" alt="Word game">
+                <h2>
+                    Word game
+                </h2>
+            </a>
+            <p>
+                A word is shown with the letters scrambled and you are required to enter the original word. The app has six modes, and keeps track of your score for each.
+            </p>
+            <p>
+                Basic javascript is used to randomize the order of the letters and jQuery is used to change what is displayed to the user.
+            </p>
+            <p align = "left">
+                Complete list of words used, adapted from
+                <a href="http://www.wordfrequency.info" target="_blank">
+                    http://www.wordfrequency.info
+                </a>.
+            </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="div-app">
+            <a href="wdpaint/" target="_blank">
+                <img src="img/screenshot-wdpaint.png" alt="WDPaint">
+                <h2>
+                    WDPaint
+                </h2>
+            </a>
+            <p>
+                A small painting app (400 x 400 px) which allows you to select brush color, size, and shape, and undo actions. 
+            </p>
+            <p>
+                The app uses a draw function which runs 30 times per second to repeatedly draw shapes at the user's current mouse position.
+            </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="div-app">
+            <a href="posturecheck/" target="_blank">
+                <img src="img/screenshot-posturecheck.png" alt="PostureCheck">
+                <h2>
+                    PostureCheck
+                </h2>
+            </a>
+            <p>
+                This timer app that will remind you to correct your posture at regular intervals. Leave the app running in an open browser tab and it will audibly remind you.
+            </p>
+            <p>
+                It also uses a draw function from the processing.js library but this app uses it as a timer.
+            </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="div-app">
+            <a href="dice-roll/" target="_blank">
+                <img src="img/screenshot-dice-roll.png" alt="Dice roll">
+                <h2>
+                    Dice roll
+                </h2>
+            </a>
+            <p>
+                A die is automatically rolled until the same number is rolled 3 times in a row. You can reroll the die by reloading the page.
+            </p>
+            <p>
+                This is a very simple webpage I made to try out PHP.
+            </p>
+        </div>
+        
+        
+        <!--about me-->
+        
+        <div class="div-scrollto-padding" id="scroll-about-me"></div>
+        <h1 id="heading-aboutme">
+            About me
+        </h1>
+        <h2>
+            Skills
+        </h2>
+        
+        <table id="table-skills">
+            <tr>
+                <td>
+                    JavaScript:
+                </td>
+                <td>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </td> 
+                <td>
+                    <a href="wdpaint/WDPaint.js" target="_blank">
+                        WDPaint
+                    </a>
+                    and
+                    <a href="posturecheck/PostureCheck.js" target="_blank">
+                        PostureCheck
+                    </a>
+                    JS files
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    jQuery:
+                </td>
+                <td>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="circle"></span>
+                </td> 
+                <td>
+                    <a href="wordgame/main.js" target="_blank">
+                        Word Game JS file
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    HTML / CSS:
+                </td>
+                <td>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </td> 
+                <td>
+                    Home page
+                    <a href="txt-archives/home-page-index.txt" target="_blank">
+                        HTML
+                    </a>
+                    and
+                    <a href=main.css target="_blank">
+                        CSS
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    PHP:
+                </td>
+                <td>
+                    <span class="dot"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </td> 
+                <td>
+                    <a href="txt-archives/dice-roll-index.txt" target="_blank">
+                        Dice roll PHP file
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Java:
+                </td>
+                <td>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </td> 
+                <td>
+                    Current aspiration.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Bodging:
+                </td>
+                <td>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </td> 
+                <td>
+                    <!--Links-->
+                </td>
+            </tr>
+    
+        </table>
+        
+        <div class="divider"></div>
+        <br>
+        <br>
+        <h2>
+            Education
+        </h2>
+        <table class="table-education">
+            <tr>
+                <td>
+                    2018 − current 
+                </td>
+                <td>
+                    CODE University of Applied Sciences
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Berlin, Germany.
+                    <span class="span-spacer"></span>
+                    <a href="https://code.berlin/en/" target="_blank">
+                        code.berlin
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td colspan="2">
+                    Software Engineering.
+                </td>
+            </tr>
+        </table>
+        <table class="table-education">
+            <tr>
+                <td>
+                    2017 
+                </td>
+                <td>
+                    Codecademy
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Online.
+                    <span class="span-spacer"></span>
+                    <a href="https://www.codecademy.com/learn" target="_blank">
+                        codecademy.com
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Java.
+                </td>
+            </tr>
+        </table>
+        <table class="table-education">
+            <tr>
+                <td>
+                    2016 − 2017
+                </td>
+                <td>
+                    Khan Academy
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Online.
+                    <span class="span-spacer"></span>
+                    <a href="https://www.khanacademy.org/" target="_blank">
+                        khanacademy.org
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Javascript, jQuery, HTML, CSS.
+                </td>
+            </tr>
+        </table>
+        <table class="table-education">
+            <tr>
+                <td>
+                    2012 − 2016
+                </td>
+                <td>
+                    Michael Oak Waldorf School
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Cape Town, South Africa.
+                    <span class="span-spacer"></span>
+                    <a href="http://www.michaeloak.org.za/" target="_blank">
+                        michaeloak.org.za
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    High school
+                </td>
+            </tr>
+        </table>
+        <table class="table-education">
+            <tr>
+                <td>
+                    2004 − 2011
+                </td>
+                <td>
+                    Home schooling
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Garden Route, South Africa.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    Primary school
+                </td>
+            </tr>
+        </table>
+        
+        
+        <!--contact-->
+        
+        <div class="div-scrollto-padding" id="scroll-get-in-touch"></div>
+        <h1 id="heading-contact">
+            Get in touch
+        </h1>
+        <p>
+            Please feel to contact me for any reason through the following form. I will try to be as swift as possible in getting back to you if you leave your contact details.
+        </p>
+        <br>
+        <iframe id="frame-google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSf47ojG2P6sPHcuW58pkU8vMuyOI8qiY34AzQ767k20peN0YA/viewform?embedded=true?hl=en" width="700" height="870" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        <br>
+        <div id="div-text-end">
+            Thank you for reading my website!
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>

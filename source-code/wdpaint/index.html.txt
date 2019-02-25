@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WDPaint</title>
+    <script src="../jslibs/processing.js"></script>
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script src="WDPaint.js"></script>
+</body>
+</html>

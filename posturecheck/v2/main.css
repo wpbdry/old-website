@@ -1,0 +1,7 @@
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+    }
+}
+/*some lekka styling*/
+/*maybe a nice border around the whole thing in the middle of the page*/

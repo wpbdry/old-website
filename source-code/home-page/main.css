@@ -1,0 +1,295 @@
+/*************************************************************************
+_/                _/  _/_/_/    _/_/_/    _/_/_/    _/_/_/    _/      _/  
+_/              _/   _/    _/  _/    _/  _/    _/  _/    _/    _/  _/     
+_/    _/_/    _/    _/_/_/    _/_/_/    _/    _/  _/_/_/        _/        
+_/  _/  _/  _/     _/        _/    _/  _/    _/  _/  _/        _/         
+_/_/    _/_/      _/        _/_/_/    _/_/_/    _/    _/      _/  made it!
+*************************************************************************/
+
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+    }
+}
+
+/***GENERAL STYLING***/
+
+:root {
+    scroll-behavior: smooth;
+    /*Colors*/
+    --c0: rgb(255, 255, 255);
+    --c2: rgb(247, 247, 247);
+    --c4: rgb(210, 221, 219);
+    --c6: rgb(125, 141, 168);
+    --c8: rgb(90, 103, 131);
+    --c10: rgb(57, 66, 83);
+    --c12: rgb(18, 28, 46);
+    --c14: rgb(6, 7, 13);
+    --c16: rgb(0, 0, 0);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    border-top: 1px var(--c6) solid;
+    border-bottom: 1px var(--c6) solid;
+    font-size: 4rem;
+    font-weight: 100;
+    color: var(--c12);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    border-top: 1px var(--c6) solid;
+    border-bottom: 1px var(--c6) solid;
+    font-size: 2rem;
+    color: black;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.divider {
+    display: block;
+    border-top: 1px var(--c6) solid;
+    height: 0;
+    width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-scrollto-padding {
+    position: relative;
+    top: -0.8rem;
+    height: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--c8);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/***BASIC LAYOUT***/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    font-family: 'Sunflower', sans-serif;
+    text-align: justify;
+}
+
+#background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200vh;
+    z-index: -1;
+}
+
+/***HEADER DIV***/
+
+#div-header {
+    width: 100vw;
+    height: 100vh; /*gets changed by JS*/
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    top: 0; /*don't change (unless you change JS as well)*/
+}
+
+#img-logo {
+    width: 16.5em;
+    position: absolute;
+    top: 4.5em;
+    left: 8em;
+}
+
+#div-text-name {
+    color: var(--c4);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 1px var(--c8);
+    position: absolute;
+    top: 6.6em; /*These values will need to be reajusted if you change font-size above*/
+    left: 4.8em; /*These values will need to be reajusted if you change font-size above*/
+}
+
+#div-text-subheading {
+    color: var(--c4);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px var(--c8);
+    position: relative;
+    top: 15.8em; /*These values will need to be reajusted if you change font-size above*/
+    left: 8.8em; /*These values will need to be reajusted if you change font-size above*/
+}
+
+#div-header-links {
+    color: var(--c4);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 2px var(--c14);
+    position: absolute;
+    bottom: 2em; /*These values will need to be reajusted if you change font-size above*/
+}
+
+#div-header-links a {
+    color: var(--c2);
+    padding-left: 5.8em; /*These values will need to be reajusted if you change font-size of div-header-links*/
+    padding-right: 5.8em; /*These values will need to be reajusted if you change font-size of div-header-links*/
+}
+
+/***CONTENT DIV***/
+
+#div-content {
+    width: 62vw; /*gets changed by JS*/
+    padding: 4rem; /*if you change this, also change js*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--c2);
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+/***ABOUT ME***/
+
+#table-skills {
+    padding-bottom: 2rem;
+}
+
+#table-skills td:nth-child(1) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    width: 12rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.3rem;
+}
+
+#table-skills td:nth-child(2) {
+    width: 14rem;
+}
+
+:root {
+    /*Dots and circles*/
+    --d-diam: 0.9rem;
+    --d-margin: 0.3rem;
+    --d-border: 0.05rem;
+}
+
+.dot {
+    height: var(--d-diam);
+    width: var(--d-diam);
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: var(--d-margin);
+    margin-right: var(--d-margin);
+}
+
+.circle {
+    height: calc(var(--d-diam) - calc(2 * var(--d-border)));
+    width: calc(var(--d-diam) - calc(2 * var(--d-border)));
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    border: black solid var(--d-border);
+    margin-left: var(--d-margin);
+    margin-right: var(--d-margin);
+}
+.table-education {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.table-education tr:nth-child(1) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.table-education tr:nth-child(1) td:nth-child(1) {
+    width: 14em;
+}
+
+.table-education tr:nth-child(3) td:nth-child(1) {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding-top: 0.25rem;
+}
+
+.f-u {
+    font-size: 0.8em;
+    margin-right: 0.6em;
+}
+
+.span-spacer {
+    display: inline-block;
+    width: 0.3rem;
+}
+
+/***MY APPS***/
+
+:root {
+    /*Screenshot dimentions*/
+    --sd: 16rem;
+}
+
+.div-app {
+    display: block;
+    min-height: var(--sd);
+    margin-bottom: 2rem;
+}
+
+.div-app .h2-con {
+    display: block;
+}
+
+.div-app img {
+    width: var(--sd);
+    height: var(--sd);
+    float: left;
+    margin-right: 3rem;
+}
+
+/***CONTACT***/
+
+#frame-google-form {
+    width: 47rem;
+}
+
+/***END***/
+
+#div-text-end {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+}

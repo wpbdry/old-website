@@ -1,0 +1,45 @@
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none
+    }
+}
+body {
+    background-color: rgb(250, 241, 215);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.mode-buttons, .level-buttons {
+    font-size: 1.5em;
+    width: 10em;
+}
+.button-descriptions {
+    font-size: 0.7em;
+}
+#form {
+    font-size: 1.5em;
+}
+#question {
+    color: rgb(188, 44, 207);
+    font-family: monospace;
+    font-size: 1.8em;
+}
+#result {
+    font-size: 1.5em;            
+}
+#help {
+    font-size: 1em;
+}
+.button-scores {
+    color: green;
+    font-size: 1em;
+}
+#level-score, #mode-score {
+    color: green;
+}
+#credits {
+    font-size: 0.5em;
+}

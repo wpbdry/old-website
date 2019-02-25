@@ -1,0 +1,380 @@
+/*************************************************************************
+_/                _/  _/_/_/    _/_/_/    _/_/_/    _/_/_/    _/      _/  
+_/              _/   _/    _/  _/    _/  _/    _/  _/    _/    _/  _/     
+_/    _/_/    _/    _/_/_/    _/_/_/    _/    _/  _/_/_/        _/        
+_/  _/  _/  _/     _/        _/    _/  _/    _/  _/  _/        _/         
+_/_/    _/_/      _/        _/_/_/    _/_/_/    _/    _/      _/  made it!
+*************************************************************************/
+
+/*
+Concept of paralax scrolling used in this website was adapted from
+https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/
+*/
+
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+    }
+}
+
+/***GENERAL STYLING***/
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: black;
+    transform: skewX(-15deg);
+    background-color: rgb(242, 166, 45);
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    height: 2.2em;
+    line-height: 2.2em;
+    vertical-align: middle;
+    position: relative;
+    left: 0.5rem;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 2rem;
+    
+    transform: skewX(-15deg);
+    border: 2px solid rgb(116, 38, 9);
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    vertical-align: middle;
+    position: relative;
+    left: 0.5rem;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.div-scrollto-padding {
+    height: 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(116, 38, 9);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/***BASIC LAYOUT***/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    font-family: 'Sunflower', sans-serif;
+    text-align: justify;
+}
+
+#parallax {
+    scroll-behavior: smooth;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+.parallax-layer {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.div-box {
+    background-color: rgb(252, 241, 227);
+    padding: 2rem 4rem 1rem 4rem;
+}
+
+/***BACKGROUND DIV***/
+
+#div-background {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3.1);
+    z-index: 2;
+    height: 100vh;
+}
+
+#div-background img {
+    width: 100vw;
+    display: block;
+}
+
+/***HEADER DIV***/
+
+#div-header {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+    opacity: 1;
+    position: relative;
+    top: -100vh;
+    
+    /*width: 100vw;*/
+    height: 100vh; /*gets changed by JS*/
+    background-color: transparent;
+}
+
+#img-logo {
+    width: 16.5em;
+    position: absolute;
+    top: 4.5em;
+    left: 8em;
+}
+
+#div-text-name {
+    color: rgb(247, 247, 247);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 2px black;
+    position: absolute;
+    top: 7.2em; /*These values will need to be reajusted if you change font-size above*/
+    left: 4em; /*These values will need to be reajusted if you change font-size above*/
+}
+
+#div-text-subheading {
+    color: rgb(247, 247, 247);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px black;
+    position: relative;
+    top: 15.8em; /*These values will need to be reajusted if you change font-size above*/
+    left: 7.6em; /*These values will need to be reajusted if you change font-size above*/
+}
+
+#div-header-links {
+    background-color: rgb(252, 241, 227);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    width: 120%;
+    position: absolute;
+    left: -10%;
+    bottom: 2em; /*These values will need to be reajusted if you change font-size above*/
+    opacity: 1;
+    text-align: center;
+    height: 2.2em;
+}
+
+#div-header-links-holder {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2.2em;
+    vertical-align: middle;
+}
+
+#middle-link {
+    margin-left: 12em;
+    margin-right: 12em;
+}
+
+#div-header-links-holder a {
+    display: inline-block;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    height: 2.2m;
+    transform: skewX(-15deg);
+}
+
+#div-header-links-holder a:hover {
+    text-decoration: none;
+    background-color: rgb(242, 166, 45);
+}
+
+/***CONTENT DIV***/
+
+#div-content {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+    position: relative;
+    top: -100vh;
+    
+    width: 70vw; /*gets changed by JS*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(252, 241, 227, 0);
+    opacity: 1;
+    
+    margin-bottom: -100vh;
+}
+
+/***ABOUT ME***/
+
+#table-skills {
+    padding-bottom: 2rem;
+}
+
+#table-skills td:nth-child(1) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    width: 12rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.3rem;
+}
+
+#table-skills td:nth-child(2) {
+    width: 14rem;
+}
+
+.dot {
+    height: 0.9rem;
+    width: 0.9rem;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.circle {
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    border: black solid 0.05rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+.table-education {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.table-education tr:nth-child(1) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.table-education tr:nth-child(1) td:nth-child(1) {
+    width: 14em;
+}
+
+.table-education tr:nth-child(3) td:nth-child(1) {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding-top: 0.25rem;
+}
+
+.f-u {
+    font-size: 0.8em;
+    margin-right: 0.6em;
+}
+
+.span-spacer {
+    display: inline-block;
+    width: 0.3rem;
+}
+
+/***MY APPS***/
+
+
+.div-app {
+    display: block;
+    min-height: 14rem;
+    margin-bottom: 2.7rem;
+}
+
+.img-screenshot {
+    width: 14rem;
+    height: 14rem;
+    float: left;
+    margin-right: 3rem;
+    border: 1px solid #742609;
+    box-shadow: -1px 2px 5px ;
+}
+
+.div-app-text {
+    display: block;
+    min-height: 14rem;
+    padding-top: 0.5rem;
+    position: relative;
+}
+
+.div-app-links {
+    position: absolute;
+    bottom: 0.7rem;
+    left: 17rem;
+    width: 30.6rem;
+    background-color: white;
+    height: 2rem;
+    line-height: 2rem;
+    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.div-app-links a {
+    margin-left: 3.4rem;
+    margin-right: 3.4rem;
+    display: inline-block;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    height: 2rem;
+    transform: skewX(-15deg);
+}
+
+.div-app-links a:hover {
+    text-decoration: none;
+    background-color: rgb(242, 166, 45);
+    
+}
+
+/***CONTACT***/
+
+#frame-google-form {
+    width: 47rem;
+    height: 55rem;
+}
+
+/***END***/
+
+#div-text-end {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+    vertical-align: middle;
+    background-color: rgb(252, 241, 227)
+}

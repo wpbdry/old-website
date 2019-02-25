@@ -1,0 +1,43 @@
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(250, 241, 215);
+    text-align: center;
+}
+.mode-buttons {
+    font-size: 1.5em;
+    width: 10em;
+}
+.button-descriptions {
+    font-size: 0.7em;
+}
+#form {
+    font-size: 1.5em;
+}
+#question {
+    color: rgb(188, 44, 207);
+    font-family: monospace;
+    font-size: 1.8em;
+}
+#result {
+    font-size: 1.5em;            
+}
+#help {
+    font-size: 1em;
+}
+#right {
+    color: green;
+}
+#wrong {
+    color: red;
+}
+#credits {
+    font-size: 0.5em;
+}
+#bab-score, #eas-score, #nor-score, #har-score, #ext-score, #pro-score {
+    color: green;
+}

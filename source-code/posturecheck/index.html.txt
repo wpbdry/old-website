@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PostureCheck</title>
+    <script src="../jslibs/processing.js"></script>
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script src="PostureCheck.js"></script>
+</body>
+</html>

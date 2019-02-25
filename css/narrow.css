@@ -1,0 +1,22 @@
+/*************************************************************************
+_/                _/  _/_/_/    _/_/_/    _/_/_/    _/_/_/    _/      _/  
+_/              _/   _/    _/  _/    _/  _/    _/  _/    _/    _/  _/     
+_/    _/_/    _/    _/_/_/    _/_/_/    _/    _/  _/_/_/        _/        
+_/  _/  _/  _/     _/        _/    _/  _/    _/  _/  _/        _/         
+_/_/    _/_/      _/        _/_/_/    _/_/_/    _/    _/      _/  made it!
+*************************************************************************/
+
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+    }
+}
+
+:root {
+    font-size: 1.26vw; /*if you change this, also change js*/
+}
+
+#div-header {
+    font-size: 1.8vw; /*This must be the same value as :root font size in wide.css*/
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------------------------------------------------------------
+_/                _/  _/_/_/    _/_/_/    _/_/_/    _/_/_/    _/      _/  
+_/              _/   _/    _/  _/    _/  _/    _/  _/    _/    _/  _/     
+_/    _/_/    _/    _/_/_/    _/_/_/    _/    _/  _/_/_/        _/      
+_/  _/  _/  _/     _/        _/    _/  _/    _/  _/  _/        _/       
+_/_/    _/_/      _/        _/_/_/    _/_/_/    _/    _/      _/  made it!
+------------------------------------------------------------------------->
+
+<!--NOTES
+Word list from http://www.wordfrequency.info
+-->
+    
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Word Game | wpbdry</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Word game!</h1>
+    <div id="content">
+    </div>
+    <div id="credits">
+        This list of words is adapted from <a href="http://www.wordfrequency.info" target="_blank">http://www.wordfrequency.info</a>
+    </div>
+    
+    <!--functionality-->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

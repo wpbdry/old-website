@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------------------------------------------------------------
+_/                _/  _/_/_/    _/_/_/    _/_/_/    _/_/_/    _/      _/  
+_/              _/   _/    _/  _/    _/  _/    _/  _/    _/    _/  _/     
+_/    _/_/    _/    _/_/_/    _/_/_/    _/    _/  _/_/_/        _/      
+_/  _/  _/  _/     _/        _/    _/  _/    _/  _/  _/        _/       
+_/_/    _/_/      _/        _/_/_/    _/_/_/    _/    _/      _/  made it!
+------------------------------------------------------------------------->
+
+<!-- NOTES
+Word list originally from http://www.wordfrequency.info
+-->
+
+<!-- CONTENTS
+    Body:          line 29
+    Modes screen:  line 60
+    Levels screen: line 102
+    Game screen:   line 144
+-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Word Game | wpbdry</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Word game!</h1>
+    
+    <span id="selected-mode" class="hidden">
+        Mode:
+        <select id="mode-select">
+            <option value="m0">Classic</option>
+            <option value="m1">Classical</option>
+            <option value="m2">Sprinter</option>
+            <option value="m3">Slow sprint</option>
+            <option value="m4">Racer</option>
+            <option value="m5">Long race</option>
+            <option value="m6">Relaxed</option>
+        </select>
+    </span>
+    <span id="selected-level" class="hidden">
+        Level:
+        <select id="level-select">
+            <option value="0">Baby</option>
+            <option value="1">Easy</option>
+            <option value="2">Average</option>
+            <option value="3">Hard</option>
+            <option value="4">Extreme</option>
+            <option value="5">Pro</option>
+        </select>
+        <br>
+        <br>
+    </span>
+    <br>
+    <br>
+    
+    <div id="modes">
+        Please select a mode below:
+        <br>
+        <br>
+        <button id="m0" class="mode-buttons">
+            Classic<span id="m0-score"></span><br>
+            <span class="button-descriptions">Most words in 5 minutes</span>
+        </button>
+        <button id="m1" class="mode-buttons">
+            Classical <span id="m1-score"></span><br>
+            <span class="button-descriptions">Most words in 20 minutes</span>
+        </button>
+        <br>
+        <br>
+        <button id="m2" class="mode-buttons">
+            Sprinter<span id="m2-score"></span><br>
+            <span class="button-descriptions">Only 30 seconds per word!</span>
+        </button>
+        <button id="m3" class="mode-buttons">
+            Slow sprint<span id="m3-score"></span><br>
+            <span class="button-descriptions">2 minutes per word</span>
+        </button>
+        <br>
+        <br>
+        <button id="m4" class="mode-buttons">
+            Racer<span id="m4-score"></span><br>
+            <span class="button-descriptions">50 words race</span>
+        </button>
+        <button id="m5" class="mode-buttons">
+            Long race<span id="m5-score"></span><br>
+            <span class="button-descriptions">200 words race</span>
+        </button>
+        <br>
+        <br>
+        <button id="m6" class="mode-buttons">
+            Relaxed<span id="m6-score"></span><br>
+            <span class="button-descriptions">No time limits</span>
+        </button>
+        <br>
+        <br>
+    </div>
+    
+    <div id="levels" class="hidden">
+        Please select a level below:
+        <br>
+        <br>
+        <button id="0" class="level-buttons">
+            Baby<span id="0-score" class="button-scores"></span><br>
+            <span class="button-descriptions">3 letter words</span>
+        </button>
+        <button id="1" class="level-buttons">
+            Easy <span id="1-score" class="button-scores"></span><br>
+            <span class="button-descriptions">4 and 5 letter words</span>
+        </button>
+        <br>
+        <br>
+        <button id="2" class="level-buttons">
+            Average<span id="2-score" class="button-scores"></span><br>
+            <span class="button-descriptions">6 and 7 letter words</span>
+        </button>
+        <button id="3" class="level-buttons">
+            Hard<span id="3-score" class="button-scores"></span><br>
+            <span class="button-descriptions">8 - 10 letter words</span>
+        </button>
+        <br>
+        <br>
+        <button id="4" class="level-buttons">
+            Extreme<span id="4-score" class="button-scores"></span><br>
+            <span class="button-descriptions">10 - 13 letter words</span>
+        </button>
+        <button id="5" class="level-buttons">
+            Pro<span id="5-score" class="button-scores"></span><br>
+            <span class="button-descriptions">Only 14 letter words</span>
+        </button>
+        <br>
+        <br>
+        Mode score: <span id="mode-score"></span>
+        <br>
+        <br>
+        <button id="back-to-modes">
+            &lt&lt Back to modes
+        </button>
+    </div>
+    
+    <div id="game" class="hidden">
+        <div id="playing">
+            <form id="form">
+                <label>
+                    Unscramble these letters to form a word:
+                    <br>
+                    <br>
+                    <span id="question"></span>
+                    <br>
+                    <br>
+                    Answer:
+                    <input id="answer" type="text" size="20" autocomplete="off">
+                </label>
+                <button type="submit">
+                    Check
+                </button>
+                <button id="skip" type="button">
+                    Skip
+                </button>
+            </form>
+            <br>
+            <br>
+            <div id="result"></div>
+            <div id="help"></div>
+            <br>
+            <br>
+            <span id="timer"></span>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2>Time out!</h2>
+            <button id="play-again">
+                Play again
+            </button>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        Level score:
+        <span id="level-score"></span>
+        <br>
+        <br>
+        <button id="back-to-levels">
+            &lt&lt Back to levels
+        </button>
+    </div>
+    
+    <br>
+    <br>
+    
+    <div id="credits">
+        This list of words is adapted from <a href="http://www.wordfrequency.info" target="_blank">http://www.wordfrequency.info</a>
+    </div>
+    
+    <!--functionality-->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<form id="form">
+    <label>
+        Unscramble these letters to form a word:
+        <br>
+        <br>
+        <span id="question"></span>
+        <br>
+        <br>
+        Answer:
+        <input id="answer" type="text" size="20" autocomplete="off">
+    </label>
+    <button type="submit">
+        Check
+    </button>
+    <button id="skip" type="button">
+        Skip
+    </button>
+</form>
+<br>
+<br>
+<div id="result"></div>
+<div id="help"></div>
+<br>
+<br>
+Score:
+<span id="right">
+    <span class="right">
+        0
+    </span>
+    /
+    <span class="total">
+        0
+    </span>
+</span>
+right.
+<span id="wrong">
+    <span class="wrong">
+        0
+    </span>
+    /
+    <span class="total">
+        0
+    </span>
+</span>
+wrong.
+<br>
+<br>
+<button id="back-to-modes">
+    &lt&lt Select a different mode
+</button>
+<br>
+<br>
